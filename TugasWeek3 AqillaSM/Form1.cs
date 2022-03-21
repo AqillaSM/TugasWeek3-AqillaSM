@@ -57,9 +57,11 @@ namespace TugasWeek3_AqillaSM
 
         String Input = "";
         String Kosong = "[EMPTY]";
+        String Baru = "";
 
         public void ButtonProses_Click(object sender, EventArgs e)
         {
+            Baru = TBoxInput.Text;
             Input = TBoxInput.Text;
             Input = Input.ToUpper();
             if (Input == "RESTART")
@@ -88,7 +90,7 @@ namespace TugasWeek3_AqillaSM
             else if (Kata.Length > 3)
             {
                 CekKataIsi = Kata.Substring(0, 4);
-                LuarKataIsi = Kata.Substring(4);
+                LuarKataIsi = Baru.Substring(4);
                 if (CekKataIsi == "ISI:")
                 {
                     LabelOutput.Text = LuarKataIsi;
